@@ -1,16 +1,80 @@
-# React + Vite
+# E-commerce Home - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto de práctica desarrollado con React y Vite, enfocado en la construcción de interfaces mediante componentes reutilizables.
 
-Currently, two official plugins are available:
+## Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Crear la estructura visual de la página principal de un e-commerce aplicando:
 
-## React Compiler
+* Componentización
+* Props
+* Layout reutilizable (`children`)
+* CSS Global y CSS Modules
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Estructura del proyecto
 
-## Expanding the ESLint configuration
+```
+src/
+  components/
+    Header/
+    Footer/
+    Layout/
+    TarjetaProducto/
+  App.jsx
+  App.css
+  index.css
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Componentes principales
+
+* Header: navegación principal
+* Footer: información del sitio
+* Layout: estructura base reutilizable (Header + Footer + contenido)
+* TarjetaProducto: componente reutilizable que recibe:
+
+  * imagen
+  * nombre
+  * precio
+
+## Tecnologías
+
+* React
+* Vite
+* CSS Modules
+* JavaScript (ES6)
+
+## Cómo ejecutar el proyecto
+
+```bash
+npm install
+npm run dev
+```
+
+Luego abrir en el navegador:
+http://localhost:5173
+
+## Estado del proyecto
+
+* Estructura base completa
+* Componentes reutilizables
+* Uso de props
+* Estilos modulares
+
+Próximas mejoras:
+
+* Mejora visual (UI/UX)
+* Responsive design
+* Integración con datos dinámicos
+
+## Aprendizajes
+
+Este proyecto me permitió consolidar conceptos fundamentales de React como:
+
+* Separación de responsabilidades
+* Reutilización de componentes
+* Manejo de props
+* Organización del código
+
+## Autor
+
+Alejandro Mendoza Gertie
