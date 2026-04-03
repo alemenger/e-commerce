@@ -77,4 +77,4 @@ Este proyecto me permitió consolidar conceptos fundamentales de React como:
 
 ## Autor
 
-Alejandro Menger
+Alejandro Mendoza Gertie
