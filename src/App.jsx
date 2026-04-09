@@ -1,6 +1,7 @@
 import "./App.css";
 import Layout from "./components/Layout/Layout";
 import TarjetaProducto from "./components/TarjetaProducto/TarjetaProducto";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
@@ -11,23 +12,7 @@ function App() {
       </section>
 
       <section className="catalogo">
-        <TarjetaProducto
-          imagen="https://placehold.co/200x180"
-          nombre="Auriculares Pro"
-          precio="59999"
-        />
-
-        <TarjetaProducto
-          imagen="https://placehold.co/200x180"
-          nombre="Smartwatch X"
-          precio="89999"
-        />
-
-        <TarjetaProducto
-          imagen="https://placehold.co/200x180"
-          nombre="Teclado Mecánico"
-          precio="45500"
-        />
+        <ItemListContainer Mensaje="Nuestros productos destacados" />
       </section>
     </Layout>
   );
