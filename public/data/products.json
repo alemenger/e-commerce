@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Garmin Forerunner 255",
+    "description": "Reloj GPS para entrenamiento de running.",
+    "price": 450000,
+    "image": "https://images.unsplash.com/photo-1502904550040-7534597429ae"
+  },
+  {
+    "id": 2,
+    "title": "Nike Pegasus 41",
+    "description": "Zapatillas para entrenamiento diario.",
+    "price": 210000,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+  },
+  {
+    "id": 3,
+    "title": "Remera técnica PaceLab",
+    "description": "Remera liviana para correr.",
+    "price": 35000,
+    "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5"
+  }
+]

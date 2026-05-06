@@ -1,20 +1,26 @@
 import "./App.css";
-import Layout from "./components/Layout/Layout";
-import TarjetaProducto from "./components/TarjetaProducto/TarjetaProducto";
-import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout.jsx";
+import Productos from "./pages/Productos.jsx";
+import Home from "./pages/Home.jsx";
+import ProductoDetalle from "./pages/ProductoDetalle.jsx";
+import Carrito from "./pages/Carrito.jsx";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
-    <Layout>
-      <section className="hero">
-        <h2>Descubrí nuestros productos</h2>
-        <p>Calidad y tecnología al mejor precio</p>
-      </section>
-
-      <section className="catalogo">
-        <ItemListContainer Mensaje="Nuestros productos destacados" />
-      </section>
-    </Layout>
+  <BrowserRouter>
+    <CartProvider>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="productos" element={<Productos />} />
+          <Route path="producto/:id" element={<ProductoDetalle />} />
+          <Route path="carrito" element={<Carrito />} />
+        </Route>
+      </Routes>
+    </CartProvider>
+  </BrowserRouter>
   );
 }
 

@@ -1,11 +1,17 @@
-import { Item } from '../Item/Item';
+import { Item } from "../Item/Item";
 
-export function ItemList({ productos }) {
-    return ( 
-        <div style={{ display: 'flex', gap: '20px' }}>
-        {productos.map(prod => (
-            <Item key={prod.id} {...prod} />
-         ))}
-        </div>
-    ); 
+export function ItemList({ products = [] }) {
+  return (
+    <div>
+      {products.map((product) => (
+        <Item
+          key={product.id}
+          id={product.id}
+          nombre={product.title}
+          precio={product.price}
+          stock={product.stock || 10}
+        />
+      ))}
+    </div>
+  );
 }

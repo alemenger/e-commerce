@@ -1,12 +1,19 @@
+import { Link } from "react-router-dom";
+import CartWidget from "../CartWidget/CartWidget";
+
 function Header() {
   return (
     <header className="header">
-      <h1>Tienda Nova</h1>
+      <h1>PaceLab</h1>
+
       <nav>
-        <a href="/">Inicio</a>
-        <a href="/productos">Productos</a>
-        <a href="/contacto">Contacto</a>
-        <a href="/carrito">Carrito</a>
+        <Link to="/">Inicio</Link>
+
+        <Link to="/productos">Productos</Link>
+
+        <Link to="/carrito">
+          <CartWidget />
+        </Link>
       </nav>
     </header>
   );

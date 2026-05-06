@@ -1,14 +1,38 @@
-export function Item({ nombre, precio, stock }) {
-    const CompraClick = () => {// Quiero que se ejecute cuando le doy clic 
-        alert(`¡Agregaste ${nombre} al chango!`);
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+
+export function Item({ id, nombre, precio, stock }) {
+  const { addToCart } = useContext(CartContext);
+
+  const CompraClick = () => {
+    const producto = {
+      id,
+      nombre,
+      precio,
+      stock,
     };
-    return (
-        <div style={{ border: '1px solid #ccc', padding: '15px', borderRadius: '8px' }}>
-            <h3>{nombre}</h3>
-            <p>Precio: ${precio}</p>
-            <p>Stock disponible: {stock}</p> 
-            {/* Cuando le boton detecta un clic (onClick), se ejecuta la función */}
-            <button onClick={CompraClick}>Comprar</button>
-        </div>
-    );
+
+    addToCart(producto);
+
+    alert(`¡Agregaste ${nombre} al carrito!`);
+  };
+
+  return (
+    <div className="product-card">
+      <h3>{nombre}</h3>
+
+      <p className="price">Precio: ${precio}</p>
+
+      <p>Stock disponible: {stock}</p>
+
+      <div className="product-buttons">
+        <button onClick={CompraClick}>Comprar</button>
+
+        <Link to={`/producto/${id}`}>
+          <button>Ver detalle</button>
+        </Link>
+      </div>
+    </div>
+  );
 }
