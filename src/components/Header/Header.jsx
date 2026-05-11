@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
 function Header() {
@@ -7,13 +7,12 @@ function Header() {
       <h1>PaceLab</h1>
 
       <nav>
-        <Link to="/">Inicio</Link>
+        <NavLink to="/">Inicio</NavLink>
+        <NavLink to="/productos">Productos</NavLink>
 
-        <Link to="/productos">Productos</Link>
-
-        <Link to="/carrito">
+        <NavLink to="/carrito">
           <CartWidget />
-        </Link>
+        </NavLink>
       </nav>
     </header>
   );

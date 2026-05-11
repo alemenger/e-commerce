@@ -202,3 +202,8 @@ button:hover {
     max-width: 300px;
   }
 }
+
+.header a.active {
+  color: #b7ff00;
+  border-bottom: 2px solid #b7ff00;
+}

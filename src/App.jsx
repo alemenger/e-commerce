@@ -6,6 +6,7 @@ import Home from "./pages/Home.jsx";
 import ProductoDetalle from "./pages/ProductoDetalle.jsx";
 import Carrito from "./pages/Carrito.jsx";
 import { CartProvider } from "./context/CartContext";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="productos" element={<Productos />} />
           <Route path="producto/:id" element={<ProductoDetalle />} />
-          <Route path="carrito" element={<Carrito />} />
+          <Route path="carrito" element={<ProtectedRoute><Carrito /></ProtectedRoute>}/>
         </Route>
       </Routes>
     </CartProvider>
