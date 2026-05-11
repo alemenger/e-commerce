@@ -207,3 +207,15 @@ button:hover {
   color: #b7ff00;
   border-bottom: 2px solid #b7ff00;
 }
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo:hover {
+  color: #b7ff00;
+}

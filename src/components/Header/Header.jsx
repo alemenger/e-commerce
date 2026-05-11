@@ -1,10 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
 function Header() {
   return (
-    <header className="header">
-      <h1>PaceLab</h1>
+      <header className="header">
+      <Link to="/" className="logo">
+        PaceLab
+      </Link>
 
       <nav>
         <NavLink to="/">Inicio</NavLink>
