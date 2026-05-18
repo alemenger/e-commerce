@@ -1,6 +1,7 @@
-# E-commerce Home - React
+# PaceLab
 
-Proyecto de práctica desarrollado con React y Vite, enfocado en la construcción de interfaces mediante componentes reutilizables.
+E-commerce de productos running desarrollado con React.
+Incluye routing, carrito de compras con Context API y navegación dinámica.
 
 ## Objetivo
 
@@ -11,69 +12,34 @@ Crear la estructura visual de la página principal de un e-commerce aplicando:
 * Layout reutilizable (`children`)
 * CSS Global y CSS Modules
 
-## Estructura del proyecto
+## Tecnologías utilizadas
 
-```
-src/
-  components/
-    Header/
-    Footer/
-    Layout/
-    TarjetaProducto/
-  App.jsx
-  App.css
-  index.css
-```
+- React
+- React Router DOM
+- Context API
+- CSS Modules
+- Vite
 
-## Componentes principales
+## Funcionalidades
 
-* Header: navegación principal
-* Footer: información del sitio
-* Layout: estructura base reutilizable (Header + Footer + contenido)
-* TarjetaProducto: componente reutilizable que recibe:
+- Navegación entre páginas
+- Catálogo de productos
+- Vista de detalle
+- Carrito de compras
+- Rutas protegidas
+- Diseño responsive
 
-  * imagen
-  * nombre
-  * precio
+## Deploy
 
-## Tecnologías
+https://e-commerce-theta-nine-77.vercel.app/
 
-* React
-* Vite
-* CSS Modules
-* JavaScript (ES6)
+## Instalación
 
-## Cómo ejecutar el proyecto
+git clone ...
 
-```bash
 npm install
+
 npm run dev
-```
-
-Luego abrir en el navegador:
-http://localhost:5173
-
-## Estado del proyecto
-
-* Estructura base completa
-* Componentes reutilizables
-* Uso de props
-* Estilos modulares
-
-Próximas mejoras:
-
-* Mejora visual (UI/UX)
-* Responsive design
-* Integración con datos dinámicos
-
-## Aprendizajes
-
-Este proyecto me permitió consolidar conceptos fundamentales de React como:
-
-* Separación de responsabilidades
-* Reutilización de componentes
-* Manejo de props
-* Organización del código
 
 ## Autor
 
