@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
-export function Item({ id, nombre, precio, stock }) {
+export function Item({ id, nombre, precio, image, stock }) {
   const { addToCart } = useContext(CartContext);
 
   const CompraClick = () => {
@@ -20,6 +20,7 @@ export function Item({ id, nombre, precio, stock }) {
 
   return (
     <div className="product-card">
+      <img src={image} alt={nombre} className="product-image" />
       <h3>{nombre}</h3>
 
       <p className="price">Precio: ${precio}</p>

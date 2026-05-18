@@ -9,6 +9,7 @@ export function ItemList({ products = [] }) {
           id={product.id}
           nombre={product.title}
           precio={product.price}
+          image={product.image}
           stock={product.stock || 10}
         />
       ))}

@@ -219,3 +219,11 @@ button:hover {
 .logo:hover {
   color: #b7ff00;
 }
+
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
