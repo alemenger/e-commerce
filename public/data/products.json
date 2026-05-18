@@ -4,20 +4,69 @@
     "title": "Garmin Forerunner 255",
     "description": "Reloj GPS para entrenamiento de running.",
     "price": 450000,
-    "image": "https://images.unsplash.com/photo-1502904550040-7534597429ae"
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
   },
   {
     "id": 2,
     "title": "Nike Pegasus 41",
     "description": "Zapatillas para entrenamiento diario.",
     "price": 210000,
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+    "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
   },
   {
     "id": 3,
     "title": "Remera técnica PaceLab",
-    "description": "Remera liviana para correr.",
+    "description": "Remera liviana y respirable para correr.",
     "price": 35000,
-    "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5"
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+  },
+  {
+    "id": 4,
+    "title": "Adidas Adizero Boston 12",
+    "description": "Zapatillas rápidas para fondos y tempo.",
+    "price": 240000,
+    "image": "https://picsum.photos/300?4"
+  },
+  {
+    "id": 5,
+    "title": "Cinturón de hidratación ProRun",
+    "description": "Ideal para largas distancias.",
+    "price": 28000,
+    "image": "https://picsum.photos/300?5"
+  },
+  {
+    "id": 6,
+    "title": "Medias compresivas RunnerX",
+    "description": "Compresión y confort para entrenamientos.",
+    "price": 18000,
+    "image": "https://picsum.photos/300?6"
+  },
+  {
+    "id": 7,
+    "title": "Auriculares deportivos JBL Endurance",
+    "description": "Auriculares inalámbricos resistentes al sudor.",
+    "price": 95000,
+    "image": "https://picsum.photos/300?7"
+  },
+  {
+    "id": 8,
+    "title": "Mochila running Salomon Active",
+    "description": "Mochila liviana con hidratación incluida.",
+    "price": 125000,
+    "image": "https://picsum.photos/300?8"
+  },
+  {
+    "id": 9,
+    "title": "Asics Gel Nimbus 26",
+    "description": "Máxima amortiguación para largas distancias.",
+    "price": 260000,
+    "image": "https://picsum.photos/300?9"
+  },
+  {
+    "id": 10,
+    "title": "Botella térmica PaceLab",
+    "description": "Botella térmica de acero inoxidable.",
+    "price": 22000,
+    "image": "https://picsum.photos/300?10"
   }
 ]

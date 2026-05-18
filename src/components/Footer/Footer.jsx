@@ -15,13 +15,18 @@ function Footer() {
         </div>
 
         <div className="footer-card">
-          <h4>Alex</h4>
+          <h4>Alexito</h4>
           <p>Diseño y experiencia de usuario</p>
         </div>
 
         <div className="footer-card">
-          <h4>Equipo PaceLab</h4>
+          <h4>Alejandrito</h4>
           <p>Selección de productos running</p>
+        </div>
+
+        <div className="footer-card">
+          <h4>Alejandro Mendoza Gertie</h4>
+          <p>Desarrollo backend y gestión de base de datos</p>
         </div>
       </div>
 
