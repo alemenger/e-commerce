@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
-
+import { Helmet } from "react-helmet-async";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,6 +25,13 @@ function Login() {
 
   return (
     <div>
+        <Helmet>
+        <title>PaceLab | Iniciar sesión</title>
+        <meta
+            name="description"
+            content="Ingresá a tu cuenta de PaceLab."
+        />
+        </Helmet>
       <h2>Iniciar sesión</h2>
 
       <form onSubmit={handleSubmit}>

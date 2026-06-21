@@ -8,7 +8,7 @@ import {
 } from "firebase/firestore";
 import { CartContext } from "../context/CartContext";
 import { db } from "../firebase/config";
-
+import { Helmet } from "react-helmet-async";
 function Checkout() {
   const { cart, clearCart } = useContext(CartContext);
 
@@ -71,6 +71,13 @@ function Checkout() {
 
   return (
     <section>
+        <Helmet>
+        <title>PaceLab | Checkout</title>
+        <meta
+        name="description"
+        content="Finalizá tu compra de forma rápida y segura."
+        />
+        </Helmet>
       <h2>Checkout</h2>
 
       <form onSubmit={handleSubmit}>

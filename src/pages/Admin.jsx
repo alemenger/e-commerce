@@ -1,11 +1,19 @@
 import { useEffect, useState } from "react";
-import { Modal, Button, Spinner, Alert } from "react-bootstrap";import {
+import { Modal, Button, Spinner, Alert } from "react-bootstrap";
+import {
   addProduct,
   getProducts,
   deleteProduct,
   updateProduct,
 } from "../services/productsService";
-
+import { FaEdit, FaTrash, FaPlus, FaSave } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
+import {
+  AdminContainer,
+  AdminTitle,
+  ProductCard,
+  PrimaryButton,
+} from "../styles/StyledComponents";
 
 function Admin() {
   const [producto, setProducto] = useState({
@@ -28,22 +36,20 @@ function Admin() {
     cargarProductos();
   }, []);
 
-async function cargarProductos() {
-  setLoading(true);
-  setError("");
+  async function cargarProductos() {
+    setLoading(true);
+    setError("");
 
-  try {
-    throw new Error("Error de prueba");
-
-    const data = await getProducts();
-    setProducts(data);
-  } catch (error) {
-    console.error(error);
-    setError("No se pudieron cargar los productos.");
-  } finally {
-    setLoading(false);
+    try {
+      const data = await getProducts();
+      setProducts(data);
+    } catch (error) {
+      console.error(error);
+      setError("No se pudieron cargar los productos.");
+    } finally {
+      setLoading(false);
+    }
   }
-}
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -69,16 +75,16 @@ async function cargarProductos() {
     };
 
     try {
-if (editingId) {
-  await updateProduct(editingId, nuevoProducto);
-  alert("Producto actualizado correctamente");
-  setEditingId(null);
-} else {
-  await addProduct(nuevoProducto);
-  alert("Producto agregado correctamente");
-}
+      if (editingId) {
+        await updateProduct(editingId, nuevoProducto);
+        alert("Producto actualizado correctamente");
+        setEditingId(null);
+      } else {
+        await addProduct(nuevoProducto);
+        alert("Producto agregado correctamente");
+      }
 
-await cargarProductos();
+      await cargarProductos();
 
       setProducto({
         title: "",
@@ -89,47 +95,55 @@ await cargarProductos();
         description: "",
       });
     } catch (error) {
-      alert("Error al agregar el producto");
+      alert("Error al guardar el producto");
       console.error(error);
     }
   }
 
-    function handleDeleteClick(product) {
+  function handleDeleteClick(product) {
     setProductToDelete(product);
     setShowModal(true);
-    }
+  }
 
-    async function confirmDelete() {
+  async function confirmDelete() {
     if (!productToDelete) return;
 
     try {
-        await deleteProduct(productToDelete.id);
-        await cargarProductos();
-        setShowModal(false);
-        setProductToDelete(null);
-        alert("Producto eliminado correctamente");
+      await deleteProduct(productToDelete.id);
+      await cargarProductos();
+      setShowModal(false);
+      setProductToDelete(null);
+      alert("Producto eliminado correctamente");
     } catch (error) {
-        alert("Error al eliminar el producto");
-        console.error(error);
+      alert("Error al eliminar el producto");
+      console.error(error);
     }
-    }
+  }
 
   function handleEdit(product) {
-  setEditingId(product.id);
+    setEditingId(product.id);
 
-  setProducto({
-    title: product.title,
-    price: product.price,
-    category: product.category,
-    stock: product.stock,
-    image: product.image,
-    description: product.description,
-  });
-}
+    setProducto({
+      title: product.title,
+      price: product.price,
+      category: product.category,
+      stock: product.stock,
+      image: product.image,
+      description: product.description,
+    });
+  }
 
   return (
-    <div>
-      <h2>Panel de Administración</h2>
+    <AdminContainer>
+      <Helmet>
+        <title>PaceLab | Panel de administración</title>
+        <meta
+          name="description"
+          content="Administración de productos de PaceLab."
+        />
+      </Helmet>
+
+      <AdminTitle>Panel de Administración</AdminTitle>
 
       <form onSubmit={handleSubmit}>
         <input
@@ -179,69 +193,70 @@ await cargarProductos();
           onChange={handleChange}
         />
 
-        <button type="submit">
-        {editingId ? "Guardar cambios" : "Agregar producto"}
-        </button>      </form>
+        <PrimaryButton type="submit">
+          {editingId ? (
+            <>
+              <FaSave /> Guardar cambios
+            </>
+          ) : (
+            <>
+              <FaPlus /> Agregar producto
+            </>
+          )}
+        </PrimaryButton>
+      </form>
 
       <hr />
 
-        {loading && (
+      {loading && (
         <div className="text-center my-3">
-            <Spinner animation="border" variant="primary" />
-            <p>Cargando productos...</p>
+          <Spinner animation="border" variant="primary" />
+          <p>Cargando productos...</p>
         </div>
-        )}
+      )}
 
-        {error && (
-        <Alert variant="danger">
-            {error}
-        </Alert>
-        )}
+      {error && <Alert variant="danger">{error}</Alert>}
 
       <h3>Productos</h3>
 
       {products.map((product) => (
-        <div
-          key={product.id}
-          style={{
-            border: "1px solid #ccc",
-            marginBottom: "10px",
-            padding: "10px",
-          }}
-        >
+        <ProductCard key={product.id}>
           <h4>{product.title}</h4>
 
           <p>Precio: ${product.price}</p>
-
           <p>Categoría: {product.category}</p>
-
           <p>Stock: {product.stock}</p>
 
-          <button onClick={() => handleEdit(product)}>Editar</button>
+          <button onClick={() => handleEdit(product)}>
+            <FaEdit size={20} /> Editar
+          </button>
 
-          <button onClick={() => handleDeleteClick(product)}>Eliminar</button>        </div>
-        ))} 
-        <Modal show={showModal} onHide={() => setShowModal(false)}>
+          <button onClick={() => handleDeleteClick(product)}>
+            <FaTrash /> Eliminar
+          </button>
+        </ProductCard>
+      ))}
+
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
-        <Modal.Title>Confirmar eliminación</Modal.Title>
+          <Modal.Title>Confirmar eliminación</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
-        ¿Seguro que querés eliminar{" "}
-        <strong>{productToDelete?.title}</strong>?
+          ¿Seguro que querés eliminar <strong>{productToDelete?.title}</strong>?
         </Modal.Body>
 
         <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShowModal(false)}>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
             Cancelar
-            </Button>
+          </Button>
 
-            <Button variant="danger" onClick={confirmDelete}>
+          <Button variant="danger" onClick={confirmDelete}>
             Eliminar
-            </Button>
+          </Button>
         </Modal.Footer>
-        </Modal>
-    </div>
+      </Modal>
+    </AdminContainer>
   );
 }
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
-
+import { Helmet } from "react-helmet-async";
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,6 +24,13 @@ function Register() {
 
   return (
     <div>
+        <Helmet>
+        <title>PaceLab | Registro</title>
+        <meta
+            name="description"
+            content="Creá tu cuenta en PaceLab."
+        />
+        </Helmet>
       <h2>Registro</h2>
 
       <form onSubmit={handleSubmit}>
