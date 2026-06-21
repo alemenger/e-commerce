@@ -1,46 +1,92 @@
-# PaceLab
+#  PaceLab
 
-E-commerce de productos running desarrollado con React.
-Incluye routing, carrito de compras con Context API y navegación dinámica.
+![PaceLab](./public/images/pacelab-home.png)
 
-## Objetivo
+PaceLab es una aplicación e-commerce desarrollada con React como proyecto final del curso de React de Talento Tech. La aplicación permite explorar un catálogo de productos para running, administrar el carrito de compras y gestionar productos mediante un panel de administración conectado a Firebase.
 
-Crear la estructura visual de la página principal de un e-commerce aplicando:
+---
 
-* Componentización
-* Props
-* Layout reutilizable (`children`)
-* CSS Global y CSS Modules
-
-## Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 - React
-- React Router DOM
-- Context API
-- CSS Modules
 - Vite
+- React Router DOM
+- Firebase Firestore
+- Firebase Authentication
+- Context API
+- React Bootstrap
+- Styled Components
+- React Icons
+- React Helmet Async
 
-## Funcionalidades
+---
 
-- Navegación entre páginas
+##  Funcionalidades
+
 - Catálogo de productos
-- Vista de detalle
-- Carrito de compras
+- Filtrado por categorías
+- Búsqueda de productos en tiempo real
+- Paginación del catálogo
+- Vista de detalle de productos
+- Carrito de compras mediante Context API
+- Registro e inicio de sesión con Firebase Authentication
 - Rutas protegidas
+- Panel de administración
+- Alta, baja, modificación y consulta (CRUD) de productos
+- Confirmación antes de eliminar productos
+- Indicadores de carga (Spinner)
+- Mensajes de error y éxito
 - Diseño responsive
 
-## Deploy
+---
+
+##  Estructura del proyecto
+
+```text
+src/
+├── components/
+├── context/
+├── firebase/
+├── layouts/
+├── pages/
+├── services/
+├── styles/
+└── App.jsx
+```
+
+---
+
+##  Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/alemenger/e-commerce.git
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Ejecutar el proyecto:
+
+```bash
+npm run dev
+```
+
+---
+
+##  Deploy
 
 https://e-commerce-theta-nine-77.vercel.app/
 
-## Instalación
+---
 
-git clone ...
+##  Autor
 
-npm install
+**Alejandro Mendoza Gertie**
 
-npm run dev
-
-## Autor
-
-Alejandro Mendoza Gertie
+GitHub:
+https://github.com/alemenger
