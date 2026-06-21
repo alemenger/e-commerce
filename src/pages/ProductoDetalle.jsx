@@ -1,5 +1,5 @@
-import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 import { Helmet } from "react-helmet-async";
+import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 
 function ProductoDetalle() {
   return (

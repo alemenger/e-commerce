@@ -1,3 +1,4 @@
+import { Container, Row, Col } from "react-bootstrap";
 import { ItemListContainer } from "../components/ItemListContainer/ItemListContainer";
 import { Helmet } from "react-helmet-async";
 
@@ -12,14 +13,26 @@ function Home() {
         />
       </Helmet>
 
-      <section className="hero">
-        <h2>Equipamiento para runners</h2>
-        <p>Corré mejor, recuperá mejor y preparate para tu próximo desafío.</p>
-      </section>
+      <Container>
+        <Row>
+          <Col>
+            <section className="hero">
+              <h2>Equipamiento para runners</h2>
+              <p>
+                Corré mejor, recuperá mejor y preparate para tu próximo desafío.
+              </p>
+            </section>
+          </Col>
+        </Row>
 
-      <section className="catalogo">
-        <ItemListContainer />
-      </section>
+        <Row>
+          <Col>
+            <section className="catalogo">
+              <ItemListContainer />
+            </section>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }

@@ -1,8 +1,15 @@
 #  PaceLab
 
-![PaceLab](./public/images/pacelab-home.png)
+PaceLab es una aplicación e-commerce desarrollada con React y Firebase como proyecto final del curso de React de Talento Tech. La aplicación permite explorar un catálogo de productos para running, administrar el carrito de compras y gestionar productos mediante un panel de administración conectado a Firebase.
 
-PaceLab es una aplicación e-commerce desarrollada con React como proyecto final del curso de React de Talento Tech. La aplicación permite explorar un catálogo de productos para running, administrar el carrito de compras y gestionar productos mediante un panel de administración conectado a Firebase.
+---
+
+## 🎯 Características
+
+- Proyecto desarrollado siguiendo arquitectura basada en componentes.
+- Integración con Firebase Authentication y Firestore.
+- Gestión global del estado mediante Context API.
+- Interfaz responsive utilizando React Bootstrap y Styled Components.
 
 ---
 
@@ -47,11 +54,11 @@ src/
 ├── components/
 ├── context/
 ├── firebase/
-├── layouts/
 ├── pages/
 ├── services/
 ├── styles/
-└── App.jsx
+├── App.jsx
+└── main.jsx
 ```
 
 ---
@@ -79,6 +86,8 @@ npm run dev
 ---
 
 ##  Deploy
+
+Aplicación publicada en Vercel:
 
 https://e-commerce-theta-nine-77.vercel.app/
 

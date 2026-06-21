@@ -39,11 +39,15 @@ function App() {
 
             <Route path="/login" element={<Login />} />
 
+            <Route path="*" element={<h2>Página no encontrada</h2>} />
+
             <Route path="/register" element={<Register />} />
             <Route path="/admin" element={
               <ProtectedRoute>
                 <Admin />
-              </ProtectedRoute>}/>
+              </ProtectedRoute>
+            }
+          />
           </Routes>
         </main>
 
