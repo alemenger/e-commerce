@@ -5,9 +5,9 @@ import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
 import Home from "./pages/Home.jsx";
-import Productos from "./pages/Productos.jsx";
-import ProductoDetalle from "./pages/ProductoDetalle.jsx";
-import Carrito from "./pages/Carrito.jsx";
+import Products from "./pages/Products.jsx";
+import ProductDetail from "./pages/ProductDetail.jsx";
+import Cart from "./pages/Cart.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
@@ -27,13 +27,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
 
-            <Route path="/productos" element={<Productos />} />
+            <Route path="/productos" element={<Products />} />
+            
+            <Route path="/category/:category" element={<Products />} />
 
-            <Route path="/category/:category" element={<Productos />} />
+            <Route path="/producto/:id" element={<ProductDetail />} />
 
-            <Route path="/producto/:id" element={<ProductoDetalle />} />
-
-            <Route path="/carrito" element={<Carrito />} />
+            <Route path="/carrito" element={<Cart />} />
 
             <Route path="/checkout" element={<Checkout />} />
 
