@@ -4,7 +4,7 @@ PaceLab es una aplicación e-commerce desarrollada con React y Firebase como pro
 
 ---
 
-## 🎯 Características
+##  Características
 
 - Proyecto desarrollado siguiendo arquitectura basada en componentes.
 - Integración con Firebase Authentication y Firestore.
