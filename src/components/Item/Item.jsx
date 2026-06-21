@@ -2,28 +2,33 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
-export function Item({ id, nombre, precio, image, stock }) {
+export function Item({ id, title, description, image, price, stock }) {
   const { addToCart } = useContext(CartContext);
 
   const CompraClick = () => {
     const producto = {
       id,
-      nombre,
-      precio,
+      title,
+      description,
+      image,
+      price,
       stock,
     };
 
     addToCart(producto);
 
-    alert(`¡Agregaste ${nombre} al carrito!`);
+    alert(`¡Agregaste ${title} al carrito!`);
   };
-
+  
   return (
     <div className="product-card">
-      <img src={image} alt={nombre} className="product-image" />
-      <h3>{nombre}</h3>
+      <img src={image} alt={title} className="product-image" />
 
-      <p className="price">Precio: ${precio}</p>
+      <h3>{title}</h3>
+
+      <p>{description}</p>
+
+      <p className="price">Precio: ${price}</p>
 
       <p>Stock disponible: {stock}</p>
 

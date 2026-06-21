@@ -9,7 +9,7 @@ function Home() {
       </section>
 
       <section className="catalogo">
-        <ItemListContainer Mensaje="Productos destacados" />
+        <ItemListContainer/>
       </section>
     </>
   );

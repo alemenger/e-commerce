@@ -5,7 +5,7 @@ function Productos() {
     <div>
       <h2>Todos los productos</h2>
 
-      <ItemListContainer Mensaje="Catálogo completo" />
+      <ItemListContainer  />
     </div>
   );
 }

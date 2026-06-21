@@ -4,14 +4,7 @@ export function ItemList({ products = [] }) {
   return (
     <div>
       {products.map((product) => (
-        <Item
-          key={product.id}
-          id={product.id}
-          nombre={product.title}
-          precio={product.price}
-          image={product.image}
-          stock={product.stock || 10}
-        />
+        <Item key={product.id} {...product} />
       ))}
     </div>
   );
